@@ -229,15 +229,15 @@ if (isset($_GET['id'])) {
             <div class="col-md-6 offset-md-3">
                 <form id="pontuacaoForm" style="display: none">
                     <div class="form-group">
-                        <label for="sabor">Pontuação para o Sabor:</label>
-                        <input type="number" class="form-control" id="sabor" name="sabor" min="0" max="10" required>
+                        <label for="sabor">Sabor:</label>
+                        <input type="number" class="form-control" id="sabor" name="sabor" min="0" max="10" required >
                     </div>
                     <div class="form-group">
-                        <label for="atendimento">Pontuação para o Atendimento:</label>
-                        <input type="number" class="form-control" id="atendimento" name="atendimento" min="0" max="10" required>
+                        <label for="atendimento">Atendimento:</label>
+                        <input type="number" class="form-control" id="atendimento" name="atendimento" min="0" max="10" required >
                     </div>
                     <div class="form-group">
-                        <label for="organizacao">Pontuação para a Organização:</label>
+                        <label for="organizacao">Organização:</label>
                         <input type="number" class="form-control" id="organizacao" name="organizacao" min="0" max="10" required>
                         
                     </div>
@@ -245,6 +245,7 @@ if (isset($_GET['id'])) {
                 </form>
             </div>
         </div>
+
 
         <script>
             $(document).ready(function(){

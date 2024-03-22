@@ -132,10 +132,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <button class="btn mt-3">confirmar</button>
         </form>
     </div>
-    <style>
-
-
-    </style>
     <p class="mb-3 text-muted text-center">
             ©️ 2024 TVG. Todos os direitos reservados.
     </p>
