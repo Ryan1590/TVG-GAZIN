@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .card-footer.bg-c-green{
     background: linear-gradient(to right, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0.19)); 
     }
@@ -77,4 +78,85 @@
  color: blueviolet;
 }
  
+=======
+.card-footer.bg-c-green{
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0.19)); 
+    }
+.text-c-green{
+    color: #00FF00;
+    }
+
+.card-footer.bg-c-orange{
+    background: linear-gradient(to right, rgba(255, 165, 0, 0.8), rgba(255, 165, 0, 0.2));
+    }
+.text-c-orange{
+    color: #FFA500;
+}
+
+.card-footer.bg-c-red{
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.2));
+    }
+.text-c-red{
+    color: red;
+}
+
+.card-footer.bg-c-blue{
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0.2));
+    }
+.text-c-blue{
+    color: blue;
+}
+.card-footer.bg-c-blue {
+    padding: 3px;
+}
+
+.card-footer.bg-c-purple {
+        background: linear-gradient(to right, rgba(128, 0, 128, 0.8), rgba(128, 0, 128, 0.2));
+ }
+
+ .text-c-purple {
+     color: rgb(128, 0, 128);
+ }
+
+
+ .card-footer.bg-c-bluefor {
+    background: linear-gradient(to right, rgba(0, 128, 128, 0.8), rgba(0, 255, 0, 0.2));
+
+}
+
+.text-c-bluefor {
+ color: rgb(17, 202, 26);
+}
+
+.card-footer.bg-c-blus {
+    background: linear-gradient(to right, rgba(0, 102, 204, 0.8), rgba(255, 105, 180, 0.2));
+
+}
+
+.text-c-blus {
+ color: rgb(49, 49, 243);
+
+}
+
+.card-footer.bg-c-orangets {
+    background: linear-gradient(to right, rgba(255, 69, 0, 0.8), rgba(255, 255, 0, 0.2));
+
+}
+
+.text-c-orangets {
+ color: orangered;
+}
+
+
+
+.card-footer.bg-c-violeta {
+    background: linear-gradient(to right, #6a82fb, #8fd3f4);
+
+}
+
+.text-c-violeta {
+ color: blueviolet;
+}
+ 
+>>>>>>> cbbb44288ce4d439adea362c20d4644d99cf3e4e
  
