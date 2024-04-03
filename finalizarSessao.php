@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
 <?php 
 
 include "conexao.php";
 
+<<<<<<< HEAD
+=======
+echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'></script>";
+
+
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
     if(isset($_GET['id'])){
         $idSessao = $_GET['id'];
 
@@ -11,6 +21,7 @@ include "conexao.php";
 
         if($stmt->execute()){
 
+<<<<<<< HEAD
             $query = "SELECT nome FROM sessoes WHERE id = ?";
             $result = $pdo->prepare($query);
             $result->bindValue(1, $idSessao);
@@ -44,6 +55,8 @@ include "conexao.php";
             $stmt->bindValue(5, $nome);
             $stmt->execute();
 
+=======
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
             $querySituacao = "UPDATE usuarios SET situacao = 'Inativo' WHERE permission = 'limited'";
             $stmt2 = $pdo->prepare( $querySituacao);
             $stmt2->execute();
@@ -60,4 +73,41 @@ include "conexao.php";
         }
     }    
 
+<<<<<<< HEAD
+=======
+=======
+<?php 
+
+include "conexao.php";
+
+echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'></script>";
+
+
+    if(isset($_GET['id'])){
+        $idSessao = $_GET['id'];
+
+        $FinalizarSessao = "UPDATE sessoes SET situacao = 'Finalizado', data_finalizacao = CURRENT_TIMESTAMP WHERE id = :id";
+        $stmt = $pdo->prepare($FinalizarSessao);
+        $stmt->bindParam(':id', $idSessao);
+
+        if($stmt->execute()){
+
+            $querySituacao = "UPDATE usuarios SET situacao = 'Inativo' WHERE permission = 'limited'";
+            $stmt2 = $pdo->prepare( $querySituacao);
+            $stmt2->execute();
+
+            session_start();
+            $_SESSION['alerta'] = array('tipo' => 'success', 'mensagem' => 'Sessão finalizada com sucesso!');
+            header("location: novaEdicao.php");
+            exit();
+        }else {
+            session_start();
+            $_SESSION['alerta'] = array('tipo' => 'error', 'mensagem' => 'Falha ao finalizar sessão');
+            header("location: novaEdicao.php");
+            exit();
+        }
+    }    
+
+>>>>>>> cbbb44288ce4d439adea362c20d4644d99cf3e4e
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
 ?>

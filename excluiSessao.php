@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
 <?php
 
 include "conexao.php";
@@ -13,6 +17,7 @@ if(isset($_GET['idGS'])) {
 
     if($delete1->execute()){
 
+<<<<<<< HEAD
         $query = "SELECT nome FROM sessoes WHERE id = ?";
             $result = $pdo->prepare($query);
             $result->bindValue(1, $idSessao);
@@ -45,6 +50,35 @@ if(isset($_GET['idGS'])) {
             $stmt->bindValue(4, $ip_user);
             $stmt->bindValue(5, $nome);
             $stmt->execute();
+=======
+        $querySituacao = "UPDATE usuarios SET situacao = 'Inativo' WHERE permission = 'limited'";
+        $stmt2 = $pdo->prepare( $querySituacao);
+        $stmt2->execute();
+
+        session_start();
+        $_SESSION['alerta'] = array('tipo' => 'success', 'mensagem' => 'Sessão excluida com sucesso!');
+        header("location: novaEdicao.php");
+        exit();
+    }
+    
+}
+
+=======
+<?php
+
+include "conexao.php";
+
+
+if(isset($_GET['idGS'])) {
+
+    $idSessao = $_GET['idGS'];
+
+    $delete = "DELETE FROM sessoes WHERE id = :id";
+    $delete1 = $pdo->prepare($delete);
+    $delete1->bindValue(":id", $idSessao);
+
+    if($delete1->execute()){
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
 
         $querySituacao = "UPDATE usuarios SET situacao = 'Inativo' WHERE permission = 'limited'";
         $stmt2 = $pdo->prepare( $querySituacao);
@@ -58,4 +92,8 @@ if(isset($_GET['idGS'])) {
     
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cbbb44288ce4d439adea362c20d4644d99cf3e4e
+>>>>>>> cc1f660dd7b129a69fed767fff52df56040786f2
 ?>
